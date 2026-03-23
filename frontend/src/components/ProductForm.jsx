@@ -34,15 +34,22 @@ const ProductForm = ({ product, onSave, onCancel }) => {
         e.preventDefault();
         setLoading(true);
         try {
+            const payload = {
+                ...formData,
+                price: Number(formData.price),
+                stock: Number(formData.stock)
+            };
+
             if (product) {
-                await axios.put(`http://localhost:5000/products/${product.id}`, formData);
+                await axios.put(`http://localhost:5000/products/${product.id}`, payload);
             } else {
-                await axios.post('http://localhost:5000/products', formData);
+                await axios.post('http://localhost:5000/products', payload);
             }
             onSave();
         } catch (error) {
             console.error('Error saving product:', error);
-            alert('Failed to save product. Please check your input.');
+            const message = error.response?.data?.error || 'Failed to save product. Please check your input.';
+            alert(message);
         } finally {
             setLoading(false);
         }

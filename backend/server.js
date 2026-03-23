@@ -98,19 +98,21 @@ app.put('/products/:id', (req, res) => {
         }
 
         const { name, category, price, image, stock } = req.body;
+        const priceNumber = Number(price);
+        const stockNumber = Number(stock);
 
         // Validation
-        if (!name || !category || !price || !image || stock === undefined) {
+        if (!name || !category || price === undefined || !image || stock === undefined) {
             return res.status(400).json({ error: 'All fields are required' });
         }
-        if (price <= 0) {
-            return res.status(400).json({ error: 'Price must be greater than 0' });
+        if (Number.isNaN(priceNumber) || priceNumber <= 0) {
+            return res.status(400).json({ error: 'Price must be a number greater than 0' });
         }
-        if (stock < 0) {
-            return res.status(400).json({ error: 'Stock must be greater than or equal to 0' });
+        if (Number.isNaN(stockNumber) || stockNumber < 0) {
+            return res.status(400).json({ error: 'Stock must be a number greater than or equal to 0' });
         }
 
-        products[index] = { ...products[index], name, category, price, image, stock };
+        products[index] = { ...products[index], name, category, price: priceNumber, image, stock: stockNumber };
         writeProducts(products);
         res.json(products[index]);
     } catch (error) {
