@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Dell XPS 13",
+    "category": "Laptop",
+    "price": 2500,
+    "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_659_40.png",
+    "stock": 41
+  },
+  {
+    "id": 2,
+    "name": "iPhone 16",
+    "category": "Phone",
+    "price": 2500,
+    "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-16-pro-max.png",
+    "stock": 15
+  },
+  {
+    "id": 3,
+    "name": "Samsung Galaxy S24 Ultra",
+    "category": "Phone",
+    "price": 1700,
+    "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/s/ss-s24-ultra-xam-222_3_1_1.png",
+    "stock": 13
+  },
+  {
+    "id": 4,
+    "name": "MacBook Pro 14 M5",
+    "category": "Laptop",
+    "price": 4000,
+    "image": "https://img.youtube.com/vi/H88kyE4TOZ0/maxresdefault.jpg",
+    "stock": 9
+  },
+  {
+    "id": 5,
+    "name": "Router WiFi 6 ",
+    "category": "Roule",
+    "price": "1500",
+    "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/f/r/frame_442_8_.png",
+    "stock": "10"
+  },
+  {
+    "id": 6,
+    "name": "Bàn phím cơ E-DRA EK375 V2 Beta Blue Black",
+    "category": "Bàn phím",
+    "price": "2500",
+    "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/g/a/gaming_8_43_.png",
+    "stock": "13"
+  }
+]
